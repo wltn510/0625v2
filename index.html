@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Home</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js" integrity="sha512-s1rKO93g92U92Iczk5WzjD32twp6HncpAn7XZ9dpowW4fjFd5Y0xQwiyM1VsMf1PCO2M2GTzFIf7TOOa+tT7PQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="contents">
+            <img class="fade-in" src="img/portfolio.png" alt="">
+        </div><!-- contents -->
+        <div class="nav">
+            <div class="btn">
+                <a href="index.html"><img src="img/icons/icons_deep-01.png" alt="home icon"></a>
+                <span class="tooltip">Home</span>
+            </div>
+            <div class="btn">
+                <a href="about.html"><img src="img/icons/icons_light-02.png" alt="about icon"></a>
+                <span class="tooltip">About</span>
+            </div>
+            <div class="btn">
+                <a href="skills.html"><img src="img/icons/icons_light-03.png" alt="skills icon"></a>
+                <span class="tooltip">Skills</span>
+            </div>
+            <div class="btn">
+                <a href="design.html"><img src="img/icons/icons_light-04.png" alt="design icon"></a>
+                <span class="tooltip">Design</span>
+            </div>
+            <div class="btn">
+                <a href="contact.html"><img src="img/icons/icons_light-05.png" alt="contact icon"></a>
+                <span class="tooltip">Contact</span>
+            </div>
+        </div>
+    </div><!-- wrap -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const fadeEls = document.querySelectorAll('.fade-in'); // .visual .fade-in 클래스 선택
+            gsap.from(fadeEls, { //'어디'에서 시작해서 현재 위치로 올 지 정하기
+                duration: 2, // 걸리는 시간
+                scale: .3, // 시작 스케일 조정
+                ease: 'elastic', // 튕기듯이 애니메이션
+                opacity: 0, // 투명했다가 나타나게
+            });
+
+            var controller = new ScrollMagic.Controller();
+
+            fadeEls.forEach(function (fadeEl) {
+                new ScrollMagic.Scene({
+                    triggerElement: fadeEl,
+                    triggerHook: 0.8,
+                    reverse: false
+                })
+                .addTo(controller);
+            });
+        });
+    </script>
+</body>
+</html>

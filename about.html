@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="about.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="contents">
+            <img class="animated-img" src="img/jisu.png" alt="">
+            <div class="textbox animated-textbox">
+                <img src="img/chatbox1.png" alt="">
+                <img src="img/chatbox2.png" alt="">
+                <img src="img/chatbox3.png" alt="">
+            </div>
+        </div><!-- contents -->
+        <div class="nav">
+            <div class="btn">
+                <a href="index.html"><img src="img/icons/icons_light-01.png" alt="home icon"></a>
+                <span class="tooltip">Home</span>
+            </div>
+            <div class="btn">
+                <a href="about.html"><img src="img/icons/icons_deep-02.png" alt="about icon"></a>
+                <span class="tooltip">About</span>
+            </div>
+            <div class="btn">
+                <a href="skills.html"><img src="img/icons/icons_light-03.png" alt="skills icon"></a>
+                <span class="tooltip">Skills</span>
+            </div>
+            <div class="btn">
+                <a href="design.html"><img src="img/icons/icons_light-04.png" alt="design icon"></a>
+                <span class="tooltip">Design</span>
+            </div>
+            <div class="btn">
+                <a href="contact.html"><img src="img/icons/icons_light-05.png" alt="contact icon"></a>
+                <span class="tooltip">Contact</span>
+            </div>
+        </div><!-- nav -->
+    </div><!-- wrap -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var controller = new ScrollMagic.Controller();
+
+            var imgScene = new ScrollMagic.Scene({
+                triggerElement: '.animated-img',
+                triggerHook: 0.8,
+                reverse: false
+            })
+            .setClassToggle('.animated-img', 'fade-in-left')
+            .addTo(controller);
+
+            var textboxScene = new ScrollMagic.Scene({
+                triggerElement: '.animated-textbox',
+                triggerHook: 0.8,
+                reverse: false
+            })
+            .setClassToggle('.animated-textbox', 'fade-in-right')
+            .addTo(controller);
+        });
+    </script>
+</body>
+</html>

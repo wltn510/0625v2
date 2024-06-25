@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+    <link rel="stylesheet" href="contact.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <img class="contact" src="img/contact.png" alt="">
+
+        <div class="contents">
+            <div class="emailbox">
+                <img src="img/email.png" alt="">
+            </div>
+
+            <div class="callbox">
+                <img src="img/call.png" alt="">
+            </div>
+        </div><!-- contents -->
+
+        <div class="nav">
+            <div class="btn">
+                <a href="index.html"><img src="img/icons/icons_light-01.png" alt="home icon"></a>
+                <span class="tooltip">Home</span>
+            </div>
+            <div class="btn">
+                <a href="about.html"><img src="img/icons/icons_light-02.png" alt="about icon"></a>
+                <span class="tooltip">About</span>
+            </div>
+            <div class="btn">
+                <a href="skills.html"><img src="img/icons/icons_light-03.png" alt="skills icon"></a>
+                <span class="tooltip">Skills</span>
+            </div>
+            <div class="btn">
+                <a href="design.html"><img src="img/icons/icons_light-04.png" alt="design icon"></a>
+                <span class="tooltip">Design</span>
+            </div>
+            <div class="btn">
+                <a href="contact.html"><img src="img/icons/icons_deep-05.png" alt="contact icon"></a>
+                <span class="tooltip">Contact</span>
+            </div>
+        </div><!-- nav -->
+    </div><!-- wrap -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var controller = new ScrollMagic.Controller();
+
+            var emailboxScene = new ScrollMagic.Scene({
+                triggerElement: '.emailbox',
+                triggerHook: 0.8,
+                reverse: false
+            })
+            .setClassToggle('.emailbox', 'fade-in')
+            .addTo(controller);
+
+            var callboxScene = new ScrollMagic.Scene({
+                triggerElement: '.callbox',
+                triggerHook: 0.8,
+                reverse: false
+            })
+            .setClassToggle('.callbox', 'fade-in')
+            .addTo(controller);
+
+            gsap.from('.contact', {
+                duration: 2,
+                scale: 0.3,
+                ease: 'elastic',
+                opacity: 0
+            });
+        });
+    </script>
+</body>
+</html>

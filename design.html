@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design</title>
+    <link rel="stylesheet" href="design.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        
+        <div class="contents">
+            <img class="designbox" src="img/designbox.png" alt="">
+            <!-- 슬라이더 메인 컨테이너 -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <!-- 슬라이드들 -->
+                    <div class="swiper-slide">
+                        <div class="imgBox">
+                            <img src="img/design/work1.jpg" alt="">
+                        </div>
+                        <div class="detail">
+                            <h3>인트로 이미지 작업<br><span>1-2 그래픽디자인 실습</span></h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="imgBox">
+                            <img src="img/design/work2.jpg" alt="">
+                        </div>
+                        <div class="detail">
+                            <h3>이미지촬영<br><span>2-1 사진실습</span></h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="imgBox">
+                            <img src="img/design/work5.jpg" alt="">
+                        </div>
+                        <div class="detail">
+                            <h3>북커버 리디자인<br><span>1-2 편집디자인 실습</span></h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="imgBox">
+                            <img src="img/design/work3.jpg" alt="">
+                        </div>
+                        <div class="detail">
+                            <h3>아트포스터 작업<br><span>1-1 그래픽디자인</span></h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="imgBox">
+                            <img src="img/design/work4.jpg" alt="">
+                        </div>
+                        <div class="detail">
+                            <h3>누끼촬영 포스터<br><span>2-1 사진실습</span></h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="imgBox">
+                            <img src="img/design/work6.jpg" alt="">
+                        </div>
+                        <div class="detail">
+                            <h3>웹사이트 리디자인<br><span>1-2 웹디자인실습</span></h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="imgBox">
+                            <img src="img/design/work7.jpg" alt="">
+                        </div>
+                        <div class="detail">
+                            <h3>야외촬영 스냅<br><span>2-1 사진실습</span></h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="imgBox">
+                            <img src="img/design/work8.jpg" alt="">
+                        </div>
+                        <div class="detail">
+                            <h3>야외촬영 스냅<br><span>2-1 사진실습</span></h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="imgBox">
+                            <img src="img/design/work9.jpg" alt="">
+                        </div>
+                        <div class="detail">
+                            <h3>야외촬영 스냅<br><span>2-1 사진실습</span></h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="imgBox">
+                            <img src="img/design/work10.jpg" alt="">
+                        </div>
+                        <div class="detail">
+                            <h3>야외촬영 스냅<br><span>2-1 사진실습</span></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <!-- <div class="swiper-scrollbar"></div> -->
+            </div>
+        </div>
+        <div class="nav">
+            <div class="btn">
+                <a href="index.html"><img src="img/icons/icons_light-01.png" alt="home icon"></a>
+                <span class="tooltip">Home</span>
+            </div>
+            <div class="btn">
+                <a href="about.html"><img src="img/icons/icons_light-02.png" alt="about icon"></a>
+                <span class="tooltip">About</span>
+            </div>
+            <div class="btn">
+                <a href="skills.html"><img src="img/icons/icons_light-03.png" alt="skills icon"></a>
+                <span class="tooltip">Skills</span>
+            </div>
+            <div class="btn">
+                <a href="design.html"><img src="img/icons/icons_deep-04.png" alt="design icon"></a>
+                <span class="tooltip">Design</span>
+            </div>
+            <div class="btn">
+                <a href="contact.html"><img src="img/icons/icons_light-05.png" alt="contact icon"></a>
+                <span class="tooltip">Contact</span>
+            </div>
+    </div>
+    <script>
+        const swiper = new Swiper('.mySwiper', {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadow: true,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+* {margin:0; padding:0;}
+ul, ol, li {list-style:none;}
+a {text-decoration:none; color: black;}
+
+body {
+    width: 100%; /* font-family: "Noto Sans KR", sans-serif; */
+    overflow-x: hidden; /* 가로 스크롤 숨김 */
+    background-image: url(./img/jelly-background.jpg);
+}
+
+p {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+}
+h3 {
+    font-family: "Noto Sans KR", serif;
+    font-size: 32px;
+    font-weight: 500;
+}
+.nav {
+    width: 115px;
+    height: 575px;
+    position: fixed;
+    right: 60px;
+    bottom: 60px;
+    background-color: rgba(255, 255, 255, 0.8); /* 투명도 적용된 배경색 */
+    border-radius: 10px;
+}
+
+.btn {
+    width: 115px;
+    height: 115px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 가로 정렬 */
+    align-items: center; /* 세로 정렬 */
+    position: relative; /* 툴팁 위치를 위해 추가 */
+}
+
+.tooltip {
+    display: none; /* 기본적으로 숨김 */
+    position: absolute;
+    bottom: 30%; /* 버튼 위에 위치 */
+    right: 90%;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+.btn:hover .tooltip {
+    display: block; /* 호버 시 나타남 */
+}
+
+.wrap {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* 화면 전체 높이 설정 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 수평 중앙 정렬 */
+
+}
+
+.contents {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    margin-top: 300px; /* contact 이미지와 간격을 둠 */
+/*     outline: solid 2px red; */
+}
+
+.emailbox, .callbox {
+    width: 400px;
+    height: 300px;
+    background-color: #fcfcfc;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 3px 3px 10px 5px #d4d4d4;
+    opacity: 0; /* 초기 상태를 투명하게 설정 */
+    transform: translateY(50px); /* 초기 상태를 아래로 이동 */
+    transition: all 0.5s ease-in-out; /* 애니메이션 설정 */
+}
+
+.emailbox {
+    margin-right: 50px; /* 이메일 상자와 콜 상자 사이의 간격 */
+}
+
+.emailbox:hover, .callbox:hover {
+    background: #f5ff9a;
+    color: white;
+}
+
+.emailbox img, .callbox img {
+    position: absolute;
+    top: 60px;
+    left: 120px;
+}
+
+.contact {
+    width: 40%;
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* 스크롤 시 적용될 클래스 */
+.fade-in {
+    opacity: 1; /* 완전 불투명 */
+    transform: translateY(0); /* 원래 위치 */
+}
+
+/* Media Queries */
+@media (max-width: 1500px) {
+    .nav {
+        width: 100%;
+        height: 120px;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px 0;
+        background-color: rgba(255, 255, 255, 0.8); /* 투명도 적용된 배경색 */
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* 그림자 추가 */
+    }
+
+    .btn {
+        width: 70px;
+        height: 70px;
+    }
+
+    .tooltip {
+        display: none; /* max-width: 1500px 일 때 툴팁 숨기기 */
+    }
+
+    .contents {
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
+}
+
+@media (max-width: 991px) {
+    /* 추가 스타일 필요 시 여기에 작성 */
+}
